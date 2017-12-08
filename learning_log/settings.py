@@ -139,7 +139,7 @@ if os.getcwd() == '/app':
 
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    ALLOWED_HOSTS = ['denis-dawn.herokuapp.com/']
+    ALLOWED_HOSTS = ['denis-dawn.herokuapp.com']
 
     DEBUG = False
 
