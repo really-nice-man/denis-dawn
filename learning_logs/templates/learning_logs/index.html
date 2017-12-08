@@ -1,0 +1,24 @@
+{% extends "learning_logs/base.html" %}
+
+
+{% block header %}
+    <div class="jumbotron">
+        <h1>Типо хоме пейдж)0</h1>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h2>Хммм, {{ user.username }}... Какое убогое имечко!</h2>
+    {% else %}
+        <h2>
+            <a href="{% url 'users:register' %}">Зарегистрируйся</a>,
+            чтобы оставить здесь свой след(наследить).
+        </h2>
+    {% endif %}
+    <h2>Кстати, этот сайт максимально юзлес, однако я типо понял джунго</h2>
+    <h3>Текст становится</h3>
+    <h4>все меньше</h4>
+    <h5>и меньше...</h5>
+    <h6>ну да, это жоска</h6>
+{% endblock content %}
