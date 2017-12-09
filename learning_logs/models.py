@@ -10,7 +10,7 @@ class Topic(models.Model):
         return self.text
 
 class Entry(models.Model):
-    """Информация в теме"""
+    """Записи в теме"""
     topic = models.ForeignKey(Topic)
     text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
