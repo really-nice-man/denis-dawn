@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 
@@ -62,6 +62,8 @@ def new_entry(request, topic_id):
 def edit_entry(request, entry_id):
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
+    if request.user != entry.owner:
+        raise Http404
     if request.method != 'POST':
         form = EntryForm(instance=entry)
     else:
@@ -69,6 +71,5 @@ def edit_entry(request, entry_id):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('learning_logs:topic', args=[topic.id]))
-
     context = {'topic': topic, 'entry': entry, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
