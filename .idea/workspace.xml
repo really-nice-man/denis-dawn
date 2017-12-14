@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a5711c1-cc59-40c6-a489-624d06cc8d83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning_log/settings.py" afterPath="$PROJECT_DIR$/learning_log/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning_logs/templates/learning_logs/base.html" afterPath="$PROJECT_DIR$/learning_logs/templates/learning_logs/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning_logs/templates/learning_logs/index.html" afterPath="$PROJECT_DIR$/learning_logs/templates/learning_logs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learning_logs/templates/learning_logs/topic.html" afterPath="$PROJECT_DIR$/learning_logs/templates/learning_logs/topic.html" />
-    </list>
+    <list default="true" id="3a5711c1-cc59-40c6-a489-624d06cc8d83" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
