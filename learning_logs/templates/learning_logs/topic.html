@@ -19,7 +19,9 @@
                 <small>
                     {{ entry.date_added|date:'M d, Y H:i' }}
                     {% if user == entry.owner %}
-                        <a href="{% url 'learning_logs:edit_entry' entry.id %}">изменить</a>
+                        <a href="{% url 'learning_logs:edit_entry' entry.id %}">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
                     {% endif %}
                 </small>
             </h3>

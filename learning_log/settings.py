@@ -129,8 +129,6 @@ BOOTSTRAP3 = {
     'include_jquery': True,
 }
 
-STATIC_ROOT = 'static'
-
 if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {
@@ -143,6 +141,7 @@ if os.getcwd() == '/app':
 
     DEBUG = False
 
+    STATIC_ROOT = 'staticfiles'
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
