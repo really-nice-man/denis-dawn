@@ -1,5 +1,6 @@
 {% extends "learning_logs/base.html" %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 
 {% block header %}
     <div class="jumbotron">
@@ -9,8 +10,10 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <h2>Хммм, {{ user.username }}... Какое убогое имечко!</h2>
-        <img src="{% static "learning_logs/d2img.jpg" %}" width="900" height="500"/>
+        <div class="container">
+            <h2>Хммм, {{ user.username }}... Какое убогое имечко!</h2>
+            <img class="img-rounded img-responsive" src="{% static "learning_logs/d2img.jpg" %}"/>
+        </div>
     {% else %}
         <h2>
             <a href="{% url 'users:register' %}">Зарегистрируйся</a>,
