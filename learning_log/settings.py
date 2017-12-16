@@ -140,7 +140,8 @@ if os.getcwd() == '/app':
 
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    ALLOWED_HOSTS = ['denis-dawn.herokuapp.com',]
+    DEBUG = False
+    ALLOWED_HOSTS = ['denis-dawn.herokuapp.com', ]
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATICFILES_DIRS = (
