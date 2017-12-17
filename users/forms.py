@@ -2,10 +2,12 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+from django.contrib.auth import password_validation
 
 class UserRegistrationForm(UserCreationForm):
     username = forms.CharField(max_length=150, label="Имя пользователя")
-    password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+    password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput,
+                                help_text=password_validation.password_validators_help_text_html())
     password2 = forms.CharField(label='Подтверждение пароля', widget=forms.PasswordInput)
     relation_to_denis = forms.CharField(max_length=1, label="Отношение к Денису",
                                         widget=forms.Select(choices=Profile.RELATION_TO_DENIS_CHOICES))
