@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'bootstrap3',
+    'bootstrap4',
     #мои приложения
     'learning_logs',
     'users',
@@ -126,7 +126,7 @@ AUTH_PROFILE_MODULE = 'users.Profile'
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/users/login/'
-BOOTSTRAP3 = {
+BOOTSTRAP4 = {
     'include_jquery': True,
 }
 

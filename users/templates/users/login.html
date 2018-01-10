@@ -1,18 +1,21 @@
 {% extends 'learning_logs/base.html' %}
-{% load bootstrap3 %}
+{% load bootstrap4 %}
 
 {% block header %}
     <h2>Войдите в аккаунт.</h2>
+    <hr style="margin-top: 2rem;">
 {% endblock header %}
 
 {% block content %}
-    <form method="post" action="{% url 'users:login' %}" class="form">
-        {% csrf_token %}
-        {% bootstrap_form form %}
+    <div class="container">
+        <form method="post" action="{% url 'users:login' %}" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
 
-        {% buttons %}
-            <button class="btn btn-primary" name="sumbit">Войти</button>
-        {% endbuttons %}
-        <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
-    </form>
+            {% buttons %}
+                <button class="btn btn-primary" name="sumbit">Войти</button>
+            {% endbuttons %}
+            <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+        </form>
+    </div>
 {% endblock content %}

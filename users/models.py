@@ -10,6 +10,9 @@ class Profile(models.Model):
                                          choices=RELATION_TO_DENIS_CHOICES)
     ready_to_register = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.user.username
+
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:

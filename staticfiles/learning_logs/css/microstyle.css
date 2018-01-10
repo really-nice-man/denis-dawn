@@ -1,0 +1,63 @@
+body {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a
+}
+
+.carousel {
+    margin-top: -2rem;
+}
+
+.carousel-item {
+  height: 35rem;
+  background-color: #ffffff;
+}
+
+.carousel-item > img {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.featurette-divider {
+    margin: 4rem 0;
+}
+
+.jumbotron {
+    background-color: #a1e3ff;
+    text-align: center;
+    border-bottom: .05rem solid #e5e5e5;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
